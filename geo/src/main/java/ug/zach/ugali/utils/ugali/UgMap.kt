@@ -1,4 +1,4 @@
-package go.lands.ilmis.utils.ugali
+package ug.zach.ugali.utils.ugali
 
 import android.content.Context
 import android.content.pm.PackageManager
@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.gms.location.LocationServices
-import com.google.android.gms.location.places.Places
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.*
@@ -134,34 +133,6 @@ object UgMap {
                     )
                 )
                 Log.d("ZAKA", it.result!!.accuracy.toString())
-            }
-        }
-    }
-
-    fun showCurrentPlace(context: AppCompatActivity) {
-        val mPlaceDetectionClient = Places.getPlaceDetectionClient(context)
-        if (ContextCompat.checkSelfPermission(
-                context,
-                android.Manifest.permission.ACCESS_FINE_LOCATION
-            )
-            == PackageManager.PERMISSION_GRANTED
-        ) {
-        } else {
-            ActivityCompat.requestPermissions(
-                context, arrayListOf(
-                    android.Manifest.permission
-                        .ACCESS_FINE_LOCATION
-                ).toTypedArray(), 1
-            )
-        }
-        val placeResult = mPlaceDetectionClient.getCurrentPlace(null)
-        placeResult.addOnCompleteListener {
-            if (it.isSuccessful) {
-                if (it.result?.count!! > 0) {
-                    it.result?.forEach { pl ->
-                        Log.d("ZAKA", pl.place?.phoneNumber.toString())
-                    }
-                }
             }
         }
     }

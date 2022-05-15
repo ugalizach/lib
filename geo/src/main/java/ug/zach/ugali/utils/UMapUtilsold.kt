@@ -7,7 +7,7 @@ import android.widget.TextView
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.*
-import go.lands.ilmis.utils.ugali.UgMap
+import ug.zach.ugali.utils.ugali.UgMap
 
 object UMapUtilsold{
 
