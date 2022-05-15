@@ -1,4 +1,4 @@
-package ug.zach.geo
+package ug.zach.ugali
 
 import org.junit.Test
 

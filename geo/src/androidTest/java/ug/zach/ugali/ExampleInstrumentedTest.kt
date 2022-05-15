@@ -1,4 +1,4 @@
-package ug.zach.geo
+package ug.zach.ugali
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
